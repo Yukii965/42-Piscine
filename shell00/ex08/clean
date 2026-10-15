@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+find . -type f -iname '#*#' -print -delete -o -iname '*~' -print -delete
