@@ -5,39 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrakoto <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/15 09:48:44 by nrakoto           #+#    #+#             */
-/*   Updated: 2026/10/15 09:48:44 by nrakoto          ###   ########.fr       */
+/*   Created: 2026/10/19 06:44:56 by nrakoto           #+#    #+#             */
+/*   Updated: 2026/10/19 10:47:59 by nrakoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+unsigned	int	ft_length(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
-	unsigned int	len;
 
 	i = 0;
-	len = 0;
-	while (src[len] != '\0')
-		len++;
 	if (size > 0)
 	{
-		while (src[i] != '\0' && i < size)
+		while (src[i] != 0 && i < size - 1)
 		{
 			dest[i] = src[i];
 			i++;
 		}
 		dest[i] = '\0';
 	}
-	return (len);
+	return (ft_length(src));
 }
-
-/* #include <stdio.h>
-
- int main(void)
-{
-	char dest[20];
-	unsigned int len;
-	len = ft_strlcpy(dest, "Bonjour 42", 4);
-	printf("destionqtion : %s\n", dest);
-	printf("Longueur sources : %u\n", len);
-} */

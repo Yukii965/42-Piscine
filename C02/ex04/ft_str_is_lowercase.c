@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrakoto <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/15 07:33:30 by nrakoto           #+#    #+#             */
-/*   Updated: 2026/10/15 07:33:31 by nrakoto          ###   ########.fr       */
+/*   Created: 2026/10/19 06:44:08 by nrakoto           #+#    #+#             */
+/*   Updated: 2026/10/19 10:47:19 by nrakoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ int	ft_str_is_lowercase(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
-		if (!(str[i] < 'a' || str[i] > 'z'))
+		if (!((str[i] >= 'a' && str[i] <= 'z')))
 		{
 			return (0);
 		}

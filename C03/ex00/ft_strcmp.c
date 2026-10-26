@@ -6,16 +6,24 @@
 /*   By: nrakoto <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 06:47:50 by nrakoto           #+#    #+#             */
-/*   Updated: 2026/10/14 06:47:51 by nrakoto          ###   ########.fr       */
+/*   Updated: 2026/10/22 01:57:06 by nrakoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char	*s1, char	*s2)
 {
 	int	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0')
+	while (s1[i] == s2[i] && s1[i])
 		i++;
 	return (s1[i] - s2[i]);
 }
+
+// #include <stdio.h>
+// int main (void)
+// {
+// 	char *s1 = "ab";
+// 	char *s2 = "abc";
+// 	printf("My : %d\n", ft_strcmp(s1, s2));
+// }
